@@ -7,7 +7,7 @@ import { Descriptions } from 'antd';
 const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
 
 
-Geocode.setApiKey("AIzaSyBe73USA33R738pw1XbuRl9Fz4clo4HbYo");
+Geocode.setApiKey("AIzaSyALVjLwOIM1gf7EzdJJVmWLKdLP-yZGTcw");
 Geocode.enableDebug();
 
 class App extends React.Component {
@@ -72,19 +72,7 @@ class App extends React.Component {
         }
     };
 
-    // shouldComponentUpdate(nextProps, nextState, nextContext) {
-    //     if (
-    //         this.state.markerPosition.lat !== this.state.center.lat ||
-    //         this.state.address !== nextState.address ||
-    //         this.state.city !== nextState.city ||
-    //         this.state.area !== nextState.area ||
-    //         this.state.state !== nextState.state
-    //     ) {
-    //         return true
-    //     } else if (this.state.mapPosition.lat === nextState.mapPosition.lat) {
-    //         return false
-    //     }
-    // }
+    
 
     getCity = (addressArray) => {
         let city = '';
@@ -190,17 +178,7 @@ class App extends React.Component {
         })
     };
 
-    // const AsyncMap = compose(
-    //     withProps({
-    //         googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyALVjLwOIM1gf7EzdJJVmWLKdLP-yZGTcw&v=3.exp&libraries=geometry,drawing,places",
-    //         loadingElement: <div style={{ height: `100%` }} />,
-    //         containerElement: <div style={{ height: `400px` }} />,
-    //         mapElement: <div style={{ height: `100%` }} />,
-    //     }),
-    //     withScriptjs,
-    //     withGoogleMap
-    // )((props) =>
-    //     <GoogleMap
+
 
     render() {
         const AsyncMap = withScriptjs(
@@ -230,16 +208,7 @@ class App extends React.Component {
                         </InfoWindow>
                         <Marker />
 
-                        {/* <MarkerWithLabel
-                            position={{ lat: -34.397, lng: 150.644 }}
-                            labelAnchor={new google.maps.Point(0, 0)}
-                            labelStyle={{ backgroundColor: "yellow", fontSize: "32px", padding: "16px" }}
-                        >
-                            <div>Hello There!</div>
-                        </MarkerWithLabel> */}
-
-
-                        {/* For Auto complete Search Box */}
+                       
                         <Autocomplete
                             style={{
                                 width: '100%',
@@ -267,7 +236,7 @@ class App extends React.Component {
                 </Descriptions>
 
                 <AsyncMap
-                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe73USA33R738pw1XbuRl9Fz4clo4HbYo&libraries=places"
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyALVjLwOIM1gf7EzdJJVmWLKdLP-yZGTcw&libraries=places"
                     loadingElement={
                         <div style={{ height: `100%` }} />
                     }
@@ -284,6 +253,6 @@ class App extends React.Component {
 
 }
 
-//export default LocationSearchModal;
+
 
 export default App;
